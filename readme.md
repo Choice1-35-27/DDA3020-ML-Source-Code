@@ -14,23 +14,27 @@ def gradient_descent(X, y):
 The block in this project is reshaped to:
 
 ```python
+...
+
 def gradient_descent(X:ndarray, y:ndarray):
     m, n = X.shape
-    self.initialize_parameters(n)
+    initialize_parameters(n)
 
-    for i in range(self.num_iterations):
+    for i in range(.num_iterations):
         # Complete your implementation here.
         # Forward pass (sigmoid function provided)
-        fx = self.sigmoid(np.dot(X, self.weights) + self.bias)
+        fx = sigmoid(np.dot(X, weights) + bias)
         # Compute cost
         cost = -1 / m * np.sum(y * np.log(fx) + (1 - y) * np.log(1 - fx))
         # Compute gradients
         gradient = 1 / m * np.dot((fx-y), X)  
         # Update weights through gradient descent
-        self.weights -= self.learning_rate * gradient
+        weights -= learning_rate * gradient
         # Print the cost every 100 iterations
         if i % 100 == 0:
             print(f"Cost after iteration {i}: {cost}")
+            
+...
 ```
 
 ## Contents
